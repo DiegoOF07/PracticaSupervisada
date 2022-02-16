@@ -1,0 +1,46 @@
+La base de datos se llama ControldeEmpresas
+
+Al momento de ejecutar por primera vez la aplicacion se debe utilizar la ruta "/inicio",
+esta creara automaticamente al usuario MAESTRO y si ya existe simplemente lo omitira
+
+
+userName: MAESTRO
+password: 123456
+
+Con el rol de "ROL_MAESTRO" podra agregar, editar, eliminar y listar mas maestros y alumnos
+Con el rol de "ROL_ALUMNO" unicamente podra acceder a alumnos
+
+Para agregar maestros solo se pide nombre, apellido, userName y password ademas de el token con la
+cabecera de autorizacion
+
+Para el login debera ingresar el userName, password y el parametro obtenerToken que ira "true"
+
+Para crear un curso como maestro, debera agregar el token con la cabecera de autenticacion,
+la ruta pide el "id" del maestro al cual se le desea crear un curso
+
+Para editar un curso como maestro se debera agregar el token con la cabecera de autenticacion, 
+la ruta pide el "id" del curso que se desea editar
+
+Para eliminar un curso como maestro se debera agregar el token con la cabecera de autenticacion,
+la ruta pide el "id" del curso que se desea eliminar
+
+Para listar los cursos que posee a su cargo un maestro debera agregar el token con la cabecera
+de autenticacion, la ruta le pedira el "id" del maestro que desea ver
+
+
+Para agregar un alumno debera escribir el nombre, el apellido, el userName y la password
+
+Para agregar un curso solamente debera agregar el token con la cabecera de autorizacion, en la 
+poner el "id" del alumno y al tener 3 cursos asignados ya no dejara, de igual manera si se 
+quisiera asignar multiples veces el mismo curso
+
+Para obtener los cursos de un alumno solo se pedira el token con la cabecera de autorizacion,
+luego en la ruta el "id" del alumno
+
+Para editar el perfil del alumno debera agregar el token con la cabecera de autorizacion,
+en la ruta mandar el "id" del alumno y en el cuerpo se le pedira nombre, apellido, idCurso
+y nombreCurso
+
+Para eliminar el perfil del alumno solo necesita agregar el token con la cabecera de autorizacion
+en la ruta mandar el "id" del alumno 
+
